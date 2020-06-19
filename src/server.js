@@ -1,3 +1,3 @@
-import { listen } from "./app"
+const app = require("./app")
 
 listen(3333)

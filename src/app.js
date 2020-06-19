@@ -1,11 +1,11 @@
-import express, { json } from "express"
-import cors from "cors"
+const express = require("express")
+const cors = require("cors")
 
-import { uuid } from "uuidv4"
+const { uuid } = require("uuidv4")
 
 const app = express()
 
-app.use(json())
+app.use(express.json())
 app.use(cors())
 
 const repositories = []
@@ -80,4 +80,4 @@ app.post("/repositories/:id/like", (req, res) => {
   return res.json(repo)
 })
 
-export default app
+module.exports = app
